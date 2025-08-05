@@ -2,6 +2,25 @@
 
 ### Week 1: Course Overview & The Cool Language
 
+**Notes:**
+
+The pipeline of the compilation process:
+1. Lexical Analysis (LA) 
+   - Devide program text (byte stream) into tokens
+
+2. Parsing (P)  
+   - Digram a abstract syntax tree (AST)
+
+3. Semantic Analysis (SA)  
+   - Check if there is any syntax error
+
+4. Optimization (O)        
+   - Modify the code to run faster / using less memory, modern compiler concern most about this
+
+5. Code Generation (CG)    
+   - Produce assembly code 
+
+
 **PA1: Finished (Aug 3 2025)**
 
 You will see result below.
@@ -32,6 +51,24 @@ s
 > Bye!
 COOL program successfully executed
 ```
+
+### Week 2: Lexical Analysis & Finite Automata
+
+**Notes:**
+
+Layers of Lexical Analysis:
+1. Lexical Specification (LS)                    
+    - Logical token define
+2. LS to Regular Expressions (RE)                
+    - Pattern matching for token at the theoretical level
+3. RE to Nondeterministic Finite Automata (NFA)  
+    - Pattern matching in computation theory
+4. NFA to Deterministic Finite Automata (DFA)    
+    - Optional trade-off, sacrifice space for faster execution 
+5. 2D Table to Implement FAs                     
+    - Implementation of pattern matching
+
+PA2: Working...
 
 ---
 
