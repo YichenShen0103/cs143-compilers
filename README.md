@@ -68,7 +68,39 @@ Layers of Lexical Analysis:
 5. 2D Table to Implement FAs                     
     - Implementation of pattern matching
 
-PA2: Working...
+**PA2: Finished (Aug 6 2025)** 
+
+You will see grading result below.
+```sh
+$ perl pa2-grading.pl
+Grading .....
+make: Entering directory '/usr/class/assignments/PA2'
+make: 'lexer' is up to date.
+make: Leaving directory '/usr/class/assignments/PA2'
+=====================================================================
+submission: ..
+
+=====================================================================
+You got a score of 63 out of 63.
+
+Submit code: 
+63:03afdbd66e7929b125f8597834fa83a4
+```
+
+You will see demo result below.
+```sh
+$ ./lexer test.cl | head -10
+#name "test.cl"
+#5 CLASS
+#5 TYPEID CellularAutomaton
+#5 INHERITS
+#5 TYPEID IO
+#5 '{'
+#6 OBJECTID population_map
+#6 ':'
+#6 TYPEID String
+#6 ';'
+```
 
 ---
 
