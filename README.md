@@ -72,6 +72,7 @@ Layers of Lexical Analysis:
 
 You will see grading result below.
 ```sh
+$ cd assignments/PA2
 $ perl pa2-grading.pl
 Grading .....
 make: Entering directory '/usr/class/assignments/PA2'
@@ -89,17 +90,27 @@ Submit code:
 
 You will see demo result below.
 ```sh
-$ ./lexer test.cl | head -10
-#name "test.cl"
-#5 CLASS
-#5 TYPEID CellularAutomaton
-#5 INHERITS
-#5 TYPEID IO
-#5 '{'
-#6 OBJECTID population_map
-#6 ':'
-#6 TYPEID String
-#6 ';'
+$ ./assignments/PA2/lexer examples/hello_world.cl
+#name "examples/hello_world.cl"
+#1 CLASS
+#1 TYPEID Main
+#1 INHERITS
+#1 TYPEID IO
+#1 '{'
+#2 OBJECTID main
+#2 '('
+#2 ')'
+#2 ':'
+#2 TYPEID SELF_TYPE
+#2 '{'
+#3 OBJECTID out_string
+#3 '('
+#3 STR_CONST "Hello, World.\n"
+#3 ')'
+#4 '}'
+#4 ';'
+#5 '}'
+#5 ';'
 ```
 
 ---
