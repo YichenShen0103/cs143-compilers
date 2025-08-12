@@ -113,6 +113,76 @@ $ ./assignments/PA2/lexer examples/hello_world.cl
 #5 ';'
 ```
 
+### Week 3 & 4: Parsing (Intro, Top-down, Bottom-up)
+
+**Notes:**
+
+Top-down parsing (LL1 Parsing)
+1. Build a parsing table T (First sets and Follow sets).
+2. Initialize the parsing stack = <S, $>
+3. If the stack top is a non-terminal X, pop X, push T[X, *next]; else terminal t and *next == t, pop t, next++.
+4. Report an error if t != *next or T[X, *next] is invalid.
+5. If the stack is empty, accept; else turn back to (2).
+
+Bottom-up parsing (SLR Parsing)
+1. Build a action table and goto table.
+2. Initialize a stack containing the state and current symbol, the whole stack is a valid perfix.
+3. Look up action[stack.top().second, input[j]], if shift k push <input[j++], k>; if reduce X -> a: pop all pairs in a, push <X, goto[stack.top().second, X]>; if accept halt normally; if error halt and report error.
+
+**PA3: Finished (Aug 12 2025)**
+
+You will see grading result below.
+
+```sh
+$ cd assignments/PA3
+$ perl pa3-grading.pl
+Grading .....
+make: Entering directory '/usr/class/assignments/PA3'
+make: 'parser' is up to date.
+make: Leaving directory '/usr/class/assignments/PA3'
+=====================================================================
+submission: ..
+
+=====================================================================
+You got a score of 70 out of 70.
+
+Submit code: 
+70:7cbbc409ec990f19c78c75bd1e06f215
+```
+
+You will see demo result below.
+```sh
+$ cd assignments/PA3
+$ ./myparser ../../examples/hello_world.cl
+#1
+_program
+  #1
+  _class
+    Main
+    IO
+    "../../examples/hello_world.cl"
+    (
+    #2
+    _method
+      main
+      SELF_TYPE
+      #3
+      _dispatch
+        #3
+        _object
+          self
+        : _no_type
+        out_string
+        (
+        #3
+        _string
+          "Hello, World.\n"
+        : _no_type
+        )
+      : _no_type
+    )
+```
+
 ---
 
 (The compiler is still building...)
